@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Central de Compras Inteligente</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="loginTela" class="login-container">
+  <div class="login-box">
+
+    <h1 class="logo">Central de Compras Inteligente</h1>
+    <p class="subtitulo">Gestão e análise de fornecedores</p>
+
+    <input type="text" id="usuario" placeholder="Usuário">
+    <input type="password" id="senha" placeholder="Senha">
+
+    <button onclick="login()">Acessar Sistema</button>
+
+    <p class="rodape">Sistema Corporativo de Compras</p>
+
+  </div>
+</div>
+
+<!-- SISTEMA -->
+<div id="sistema" style="display:none;">
+
+  <div class="layout">
+
+    <!-- MENU -->
+    <aside class="sidebar">
+      <h2>Compras Corporativas</h2>
+      <ul>
+        <li onclick="mostrarPagina('dashboard')">Dashboard</li>
+        <li onclick="mostrarPagina('cotacao')">Cotações</li>
+        <li onclick="logout()">Sair</li>
+      </ul>
+    </aside>
+
+    <main class="content">
+
+      <!-- DASHBOARD -->
+      <div id="dashboard" class="pagina">
+        <h1>Painel de Controle</h1>
+
+        <div class="dashboard">
+          <div class="card small">
+            <h3>Total Fornecedores</h3>
+            <p id="total">0</p>
+          </div>
+
+          <div class="card small">
+            <h3>Melhor Preço</h3>
+            <p id="melhorPreco">R$ 0</p>
+          </div>
+
+          <div class="card small">
+            <h3>Preço Médio</h3>
+            <p id="mediaPreco">R$ 0</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- COTAÇÃO -->
+      <div id="cotacao" class="pagina" style="display:none;">
+        <h1>Gestão de Cotações</h1>
+
+        <div class="card">
+          <input type="text" id="produto" placeholder="Produto">
+          <button onclick="adicionarProduto()">Salvar Produto</button>
+        </div>
+
+        <div class="card">
+          <input type="text" id="fornecedor" placeholder="Fornecedor">
+          <input type="number" id="preco" placeholder="Preço">
+          <button onclick="adicionarPreco()">Adicionar Cotação</button>
+        </div>
+
+        <div class="card">
+          <table>
+            <thead>
+              <tr>
+                <th>Fornecedor</th>
+                <th>Preço</th>
+                <th>Ação</th>
+              </tr>
+            </thead>
+            <tbody id="lista"></tbody>
+          </table>
+        </div>
+
+        <div class="card destaque">
+          <button onclick="calcularMelhor()">Analisar Cotação</button>
+          <p id="resultado"></p>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+

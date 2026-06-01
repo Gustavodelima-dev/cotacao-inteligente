@@ -58,9 +58,10 @@ O sistema avalia os fornecedores com base em três critérios principais:
 - ⏱ Prazo  
 - ⭐ Qualidade  
 
-### 📊 Fórmula de Score
+🛠️ Tecnologias Utilizadas
 
-```text
-Score = (1 / preço) * 0.5 
-      + (1 / prazo) * 0.2 
-      + (qualidade / 5) * 0.3
+- HTML5
+- CSS3
+- JavaScript
+- Node.js
+- Express

@@ -65,3 +65,23 @@ O sistema avalia os fornecedores com base em três critérios principais:
 - JavaScript
 - Node.js
 - Express
+
+---
+
+## 🚀 Acesso ao Projeto
+
+Você pode acessar o projeto de duas formas:
+
+### 🔗 Visualização Online (GitHub Pages)
+
+https://github.com/Gustavodelima-dev/cotacao-inteligente/
+
+---
+
+### 💻 Executar Localmente
+
+```bash
+# Clone o repositório
+git clone https://github.com/Gustavodelima-dev/cotacao-inteligente.git
+
+# Acesse o arquivo index.html no navegador
